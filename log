@@ -88,3 +88,12 @@ exercises.c:28:4: error: expected ‘(’ before ‘else’
       |    (
 Compilation failed
 47af2e3
+Thu 14 Mar 2024 02:59:32 PM UTC: 
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:28:4: error: expected ‘(’ before ‘else’
+   28 | if else  (size%2==0){
+      |    ^~~~
+      |    (
+Compilation failed
+901a0ef
