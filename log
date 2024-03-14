@@ -97,3 +97,9 @@ exercises.c:28:4: error: expected ‘(’ before ‘else’
       |    (
 Compilation failed
 901a0ef
+Thu 14 Mar 2024 03:00:30 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 10/70
+5534c46
