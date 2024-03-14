@@ -34,7 +34,7 @@ if (size%2==0){
       arr[size-1-i]=temp;
     }
     }  
-  return arr;
+  return;
 }
 /*
 Ejercicio 3: Filtrar Números Pares
