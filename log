@@ -39,3 +39,17 @@ In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163
       |         ^~~~~~~~
 Compilation failed
 a53952b
+Thu 14 Mar 2024 02:47:50 PM UTC: 
+ exercises.c | 27 ++++++++++++++++++++++++---
+ 1 file changed, 24 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:28:8: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   28 | return arr;
+      |        ^~~
+exercises.c:26:6: note: declared here
+   26 | void reverseArray(int arr[], int size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c2eb30f

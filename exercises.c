@@ -1,4 +1,4 @@
-a #include <ctype.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,16 +13,37 @@ int findMax(int arr[], int size) {
 int EsMayor =0;
   for (int i=0;i<size;i++ )
     {
-      if (EsMayor<arr[i])EsMayor=arr[i];
+      if (EsMayor<arr[i])
+        EsMayor=arr[i];
     }
+  return EsMayor;
   return 0; }
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size) {}
+void reverseArray(int arr[], int size) {
+if (size <= 1)
+return arr;
+else if (size%2==0){
+  int temp=0;
+  for (int i=0;i<size/2;i++)
+    {
+      temp=arr[i];
+      arr[i]=arr[size-1-i];
+      arr[size-1-i]=temp;
+    }
+    }
+else if (size%2!=0)
+{
 
+  
+}
+  
+  
+  return;
+}
 /*
 Ejercicio 3: Filtrar Números Pares
 Descripción: Escribe una función que tome un arreglo de enteros
