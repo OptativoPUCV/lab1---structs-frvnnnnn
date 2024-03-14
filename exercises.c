@@ -34,14 +34,7 @@ else if (size%2==0){
       arr[i]=arr[size-1-i];
       arr[size-1-i]=temp;
     }
-    }
-else if (size%2!=0)
-{
-
-  
-}
-  
-  
+    }  
   return;
 }
 /*
