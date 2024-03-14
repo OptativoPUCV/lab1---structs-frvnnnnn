@@ -67,3 +67,13 @@ exercises.c:26:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 7cd5065
+Thu 14 Mar 2024 02:57:02 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:28:1: error: expected expression before ‘else’
+   28 | else if (size%2==0){
+      | ^~~~
+Compilation failed
+357f718
