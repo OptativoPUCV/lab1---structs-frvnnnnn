@@ -307,3 +307,16 @@ Fri 15 Mar 2024 11:49:32 PM UTC:
  tests:  0|5
 total_score: 20/70
 3910b97
+Fri 15 Mar 2024 11:51:10 PM UTC: 
+ exercises.c | 30 ++++++++----------------------
+ 1 file changed, 8 insertions(+), 22 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:51:34: error: expected expression before ‘int’
+   51 |         newArr = realloc(newArr ,int newSize);
+      |                                  ^~~
+exercises.c:52:17: error: array subscript is not an integer
+   52 |           newArr[newSize]=arr[i];
+      |                 ^
+Compilation failed
+b9b4a66

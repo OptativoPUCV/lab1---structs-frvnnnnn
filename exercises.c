@@ -42,34 +42,20 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newsize) {
-      int *nuevoArr = NULL;
-      *newsize = 0;
-
-      for (int i = 0; i < size; i++) {
-          if (arr[i] % 2 == 0) {
-              (*newsize)++;
-          }
-      }
-
-      if (*newsize > 0) {
-          nuevoArr = (int *)malloc(*newsize * sizeof(int));
-          if (nuevoArr == NULL) {
-              printf("Error: Memoria insuficiente.\n");
-              exit(1);
-          }
-
-          int j = 0;
-          for (int i = 0; i < size; i++) {
-              if (arr[i] % 2 == 0) {
-                  nuevoArr[j] = arr[i];
-                  j++;
-              }
-          }
-      }
-
-      return nuevoArr;
-  }
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
+  int *newArr=NULL;
+  
+  for (int i=0;i<size;i++)
+    {
+      if (arr[i]%2==0){
+        newArr = realloc(newArr ,int newSize);
+          newArr[newSize]=arr[i];
+          newSize++;
+    }
+    }
+  
+  
+  return NULL; }
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
