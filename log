@@ -289,3 +289,15 @@ test.c:151:19: error: initialization of ‘int *’ from ‘int’ makes pointer
 cc1: all warnings being treated as errors
 Compilation failed
 0e98de9
+Fri 15 Mar 2024 11:49:05 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:47:8: error: ‘newsize’ undeclared (first use in this function); did you mean ‘newSize’?
+   47 |       *newsize = 0;
+      |        ^~~~~~~
+      |        newSize
+exercises.c:47:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3bf1946
