@@ -129,3 +129,35 @@ Thu 14 Mar 2024 03:09:19 PM UTC:
  tests:  0|5
 total_score: 20/70
 61e5029
+Fri 15 Mar 2024 11:14:19 PM UTC: 
+ exercises.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:47:20: error: expected expression before ‘void’
+   47 |   newArr = realloc(void newArr , size_t newSize);
+      |                    ^~~~
+exercises.c:47:12: error: too few arguments to function ‘realloc’
+   47 |   newArr = realloc(void newArr , size_t newSize);
+      |            ^~~~~~~
+In file included from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+In file included from test.c:1:
+exercises.c:51:17: error: array subscript is not an integer
+   51 |           newArr[newSize]=arr[i];
+      |                 ^
+exercises.c:50:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   50 |       if (arr[i]%2==0)
+      |       ^~
+exercises.c:52:11: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   52 |           newSize++;
+      |           ^~~~~~~
+exercises.c:46:8: error: variable ‘newArr’ set but not used [-Werror=unused-but-set-variable]
+   46 |   int *newArr=NULL;
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4363d8a
