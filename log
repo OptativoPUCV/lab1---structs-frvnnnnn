@@ -301,3 +301,9 @@ exercises.c:47:8: error: ‘newsize’ undeclared (first use in this function); 
 exercises.c:47:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3bf1946
+Fri 15 Mar 2024 11:49:32 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 20/70
+3910b97
