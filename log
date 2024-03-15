@@ -264,3 +264,16 @@ exercises.c:51:17: error: array subscript is not an integer
 cc1: all warnings being treated as errors
 Compilation failed
 3721c77
+Fri 15 Mar 2024 11:20:11 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:47:28: error: expected expression before ‘int’
+   47 |   newArr = realloc(newArr ,int newSize);
+      |                            ^~~
+exercises.c:51:17: error: array subscript is not an integer
+   51 |           newArr[newSize]=arr[i];
+      |                 ^
+Compilation failed
+af31e34
