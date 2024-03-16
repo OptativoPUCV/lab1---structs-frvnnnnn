@@ -61,9 +61,9 @@ ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) {
-        int newsize=size1 + size2;
-  int a=0;  
-  int b=0;
+        int newsize = size1 + size2;
+        int a=0;  
+        int b=0;
       for (int i=0;i<newsize;i++)
         {
           if (arr1[a]<arr2[b])
@@ -79,11 +79,23 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
           }
           if (arr1[a]==arr2[b]){
             result[i]=arr2[b];
-            b++;}
-          continue;
+            b++;
+            continue;}
+          if (a==size1)
+          {
+            result[i]=arr2[b];
+            b++;
+            continue;
+          }
+          if (b==size2)
+          {
+            result[i]=arr1[a];
+            a++;
+            continue;
+          }
+          
         }
                        }
-
 /*
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
