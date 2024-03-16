@@ -94,15 +94,15 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) { 
       for(int u=0;u<size;u++)
       {if (arr[u]>arr[u+1]){
-        for (int i=0;i<size;i++)
+        for (int i=0;i<size-1;i++)
           {
-            if (arr[i]<arr[i+1])return 0;
+            if (arr[i]<arr[i+1]){return 0;}
           }
           return 1;             
       }
       else if (arr[u]<arr[u+1])
       {
-        for (int i=0;i<size;i++)
+        for (int i=0;i<size-1;i++)
           if (arr[i]>arr[i+1]){return 0;}
   
 
