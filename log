@@ -354,3 +354,9 @@ exercises.c:52:17: error: array subscript is not an integer
       |                 ^
 Compilation failed
 55d0944
+Sat 16 Mar 2024 01:13:42 AM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  0|5
+total_score: 20/70
+307ae50
