@@ -44,6 +44,7 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int *newArr=NULL;
+  *newSize=0;
   for (int i=0;i<size;i++){
       if (arr[i]%2==0){
         newArr = realloc(newArr, *newSize);
@@ -51,9 +52,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
         (*newSize)++;
                       }
     }
-  
-  
-  return NULL; }
+  return newArr; }
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
