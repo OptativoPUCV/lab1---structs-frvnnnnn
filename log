@@ -360,3 +360,18 @@ Sat 16 Mar 2024 01:13:42 AM UTC:
  tests:  0|5
 total_score: 20/70
 307ae50
+Sat 16 Mar 2024 01:16:46 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:51:18: error: too many arguments to function ‘realloc’
+   51 |         newArr = realloc(newArr, sizeof(int) , (*newSize + 1));
+      |                  ^~~~~~~
+In file included from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+Compilation failed
+ad142a2
