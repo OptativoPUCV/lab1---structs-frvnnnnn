@@ -136,10 +136,6 @@ typedef struct {
         strcpy(libro->autor.nombre, nombreAutor);
     }
 
-    
-   
-}
-
 /*
 Ejercicio 7: Lista enlazada de números
 Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
