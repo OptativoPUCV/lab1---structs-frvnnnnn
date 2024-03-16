@@ -152,19 +152,6 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) { 
-  Nodo *Newarr = NULL;
-  Newarr = malloc(size * sizeof(Nodo));
-
-  for (int i = 0; i < size - 1; i++) {
-    Newarr[i].numero = arr[i];
-    Newarr[i].siguiente = &Newarr[i + 1];
-  }
-
-  Newarr[size - 1].numero = arr[size - 1];
-  Newarr[size - 1].siguiente = NULL;
-  
-  return &Newarr[0]; // Return a pointer to the first element of the linked list
-}Nodo *crearListaEnlazada(int arr[], int size) { 
   Nodo *Newarr=NULL;
   Newarr= malloc(size* sizeof(Nodo));
   for (int i=0;i<size-1;i++)
@@ -174,4 +161,5 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     }
   Newarr[size-1].numero=arr[size-1];
   Newarr[size-1].siguiente=NULL;
-  return Newarr->siguiente[0]; }
+  return Newarr;
+}
