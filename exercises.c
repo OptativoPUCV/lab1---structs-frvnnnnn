@@ -81,8 +81,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
           else if (arr1[a]==arr2[b]){
             result[i]=arr2[b];
             b++;
-            continue;}
-          
+            continue;
         }
 }
 /*
@@ -118,55 +117,4 @@ información utilizando estructuras anidadas en C. Escribe la función para
 inicializar la información de un libro.
 */
 
-typedef struct {
-  char nombre[50];
-  int anioNacimiento;
-} Autor;
 
-typedef struct {
-  char titulo[100];
-  Autor autor;
-  int anioPublicacion;
-} Libro;
-
-    void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor, int anioNacimiento, int anioPublicacion) {
-        strcpy(libro->titulo, titulo);
-        libro->anioPublicacion = anioPublicacion;
-        libro->autor.anioNacimiento = anioNacimiento;
-        strcpy(libro->autor.nombre, nombreAutor);
-    }
-
-/*
-Ejercicio 7: Lista enlazada de números
-Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
-luego cree una lista enlazada usando la estructura Nodo. Cada nodo de la lista
-debe contener un número del arreglo, y los nodos deben estar enlazados en el
-mismo orden que los números aparecen en el arreglo. El último nodo de la lista
-debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
-lista enlazada.
-Recuerda reservar memoria dinámica para cada nodo usando malloc.
-Puedes guiarte con lo que vimos en las clases (diapos).
-  */
-
-typedef struct nodo {
-  int numero;
-  struct nodo *siguiente; // puntero al siguiente nodo
-} Nodo;
-
-Nodo *crearListaEnlazada(int arr[], int size) { 
-  Nodo *head = NULL;
-  Nodo *ptr = NULL;
-  for (int i = 0; i < size; i++) {
-    Nodo *nuevoNodo = malloc(sizeof(Nodo));
-    nuevoNodo->numero = arr[i];
-    nuevoNodo->siguiente = NULL;
-    if (head == NULL) {
-      head = nuevoNodo;
-      ptr = nuevoNodo;
-    } else {
-      ptr->siguiente = nuevoNodo;
-      ptr = ptr->siguiente;
-    }
-  }
-  return head;
-}

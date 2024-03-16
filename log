@@ -713,3 +713,104 @@ Sat 16 Mar 2024 06:00:18 PM UTC:
  tests:  0|2
 total_score: 50/70
 a9ce33c
+Sat 16 Mar 2024 06:03:55 PM UTC: 
+ exercises.c | 54 +-----------------------------------------------------
+ 1 file changed, 1 insertion(+), 53 deletions(-)
+test.c: In function ‘mergeSortedArrays’:
+test.c:37:24: error: unknown type name ‘Nodo’
+   37 | void print_linked_list(Nodo* lista) {
+      |                        ^~~~
+test.c:289:26: error: unknown type name ‘Libro’
+  289 | void imprimirLibro(const Libro *libro) {
+      |                          ^~~~~
+test.c: In function ‘imprimirLibro’:
+test.c:290:35: error: request for member ‘titulo’ in something not a structure or union
+  290 |   printf("    Título: %s\n", libro->titulo);
+      |                                   ^~
+test.c:291:50: error: request for member ‘autor’ in something not a structure or union
+  291 |   printf("    Autor: %s (Nacido en: %d)\n", libro->autor.nombre, libro->autor.anioNacimiento);
+      |                                                  ^~
+test.c:291:71: error: request for member ‘autor’ in something not a structure or union
+  291 |   printf("    Autor: %s (Nacido en: %d)\n", libro->autor.nombre, libro->autor.anioNacimiento);
+      |                                                                       ^~
+test.c:292:47: error: request for member ‘anioPublicacion’ in something not a structure or union
+  292 |   printf("    Año de Publicación: %d\n", libro->anioPublicacion);
+      |                                               ^~
+test.c: In function ‘test_biblioteca’:
+test.c:296:3: error: unknown type name ‘Libro’
+  296 |   Libro libro;
+      |   ^~~~~
+test.c:306:5: error: implicit declaration of function ‘inicializarLibro’ [-Werror=implicit-function-declaration]
+  306 |     inicializarLibro(&libro, titulos[i], autores[i], aniosNacimiento[i],
+      |     ^~~~~~~~~~~~~~~~
+test.c:312:21: error: request for member ‘titulo’ in something not a structure or union
+  312 |     if (strcmp(libro.titulo, titulos[i]) != 0 ||
+      |                     ^
+test.c:313:21: error: request for member ‘autor’ in something not a structure or union
+  313 |         strcmp(libro.autor.nombre, autores[i]) != 0 ||
+      |                     ^
+test.c:314:14: error: request for member ‘autor’ in something not a structure or union
+  314 |         libro.autor.anioNacimiento != aniosNacimiento[i] ||
+      |              ^
+test.c:315:14: error: request for member ‘anioPublicacion’ in something not a structure or union
+  315 |         libro.anioPublicacion != aniosPublicacion[i]) {
+      |              ^
+test.c: In function ‘test_crearListaEnlazada’:
+test.c:331:5: error: unknown type name ‘Nodo’
+  331 |     Nodo* lista = crearListaEnlazada(arr, size);
+      |     ^~~~
+test.c:331:19: error: implicit declaration of function ‘crearListaEnlazada’; did you mean ‘test_crearListaEnlazada’? [-Werror=implicit-function-declaration]
+  331 |     Nodo* lista = crearListaEnlazada(arr, size);
+      |                   ^~~~~~~~~~~~~~~~~~
+      |                   test_crearListaEnlazada
+test.c:331:19: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+test.c:333:5: error: unknown type name ‘Nodo’
+  333 |     Nodo* current = lista;
+      |     ^~~~
+test.c:336:37: error: request for member ‘numero’ in something not a structure or union
+  336 |       if (current == NULL || current->numero != arr[i]) {
+      |                                     ^~
+test.c:339:9: error: implicit declaration of function ‘print_linked_list’ [-Werror=implicit-function-declaration]
+  339 |         print_linked_list(lista);
+      |         ^~~~~~~~~~~~~~~~~
+test.c:343:11: error: unknown type name ‘Nodo’
+  343 |           Nodo* temp = lista;
+      |           ^~~~
+test.c:344:24: error: request for member ‘siguiente’ in something not a structure or union
+  344 |           lista = lista->siguiente;
+      |                        ^~
+test.c:349:24: error: request for member ‘siguiente’ in something not a structure or union
+  349 |       current = current->siguiente;
+      |                        ^~
+test.c:360:9: error: unknown type name ‘Nodo’
+  360 |         Nodo* temp = lista;
+      |         ^~~~
+test.c:361:22: error: request for member ‘siguiente’ in something not a structure or union
+  361 |         lista = lista->siguiente;
+      |                      ^~
+test.c:369:7: error: unknown type name ‘Nodo’
+  369 |       Nodo* temp = lista;
+      |       ^~~~
+test.c:370:20: error: request for member ‘siguiente’ in something not a structure or union
+  370 |       lista = lista->siguiente;
+      |                    ^~
+test.c: In function ‘mergeSortedArrays’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+46a6292
