@@ -161,5 +161,5 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     }
   Newarr[size-1].numero=arr[size-1];
   Newarr[size-1].siguiente=NULL;
-  return *Newarr;
+  return Newarr;
 }
