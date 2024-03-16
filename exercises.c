@@ -48,7 +48,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   for (int i=0;i<size;i++)
     {
       if (arr[i]%2==0){
-        newArr = realloc(newArr ,int newSize);
+          newArr = realloc(newArr ,int newSize);
           newArr[newSize]=arr[i];
           newSize++;
     }
@@ -63,8 +63,28 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) {
+        int newsize=size1 + size2;
+  int a=0  b=0;
+      for (int i=0;i<newsize;i++)
+        {
+          if (arr1[a]<arr2[b])
+          {
+            result[i]=arr1[a];
+            a++;
+          }
+          if (arr1[a]>arr2[b]){
+            result[i]=arr2[b];
+            b++;
+          }
+          else
+          {
+            result[i]=arr1[a];
+            i++;
+            result[i]=arr1[a];
+          }
+        }
+                       }
 
 /*
 Ejercicio 5: Comprobación de Ordenación

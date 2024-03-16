@@ -320,3 +320,24 @@ exercises.c:52:17: error: array subscript is not an integer
       |                 ^
 Compilation failed
 b9b4a66
+Sat 16 Mar 2024 01:10:52 AM UTC: 
+ exercises.c | 24 ++++++++++++++++++++++--
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:51:36: error: expected expression before ‘int’
+   51 |           newArr = realloc(newArr ,int newSize);
+      |                                    ^~~
+exercises.c:52:17: error: array subscript is not an integer
+   52 |           newArr[newSize]=arr[i];
+      |                 ^
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:68:12: error: expected ‘,’ or ‘;’ before ‘b’
+   68 |   int a=0  b=0;
+      |            ^
+exercises.c:71:28: error: ‘b’ undeclared (first use in this function)
+   71 |           if (arr1[a]<arr2[b])
+      |                            ^
+exercises.c:71:28: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f58b8d6
