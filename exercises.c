@@ -52,7 +52,8 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
         (*newSize)++;
                       }
     }
-  return newArr; }
+  return NULL; }
+
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
@@ -83,7 +84,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
             continue;}
           
         }
-                       }
+}
 /*
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
