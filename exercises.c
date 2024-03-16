@@ -130,7 +130,7 @@ typedef struct {
 } Libro;
 
   void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,int anioNacimiento, int anioPublicacion) {
-
+  
    
 }
 
@@ -152,14 +152,19 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) { 
-  Nodo *Newarr=NULL;
-  Newarr= malloc(size* sizeof(Nodo));
-  for (int i=0;i<size-1;i++)
-    {
-      Newarr[i].numero=arr[i];
-      Newarr[i].siguiente=&Newarr[i+1];
+  Nodo *head = NULL;
+  Nodo *temp = NULL;
+  for (int i = 0; i < size; i++) {
+    Nodo *nuevoNodo = malloc(sizeof(Nodo));
+    nuevoNodo->numero = arr[i];
+    nuevoNodo->siguiente = NULL;
+    if (head == NULL) {
+      head = nuevoNodo;
+      temp = nuevoNodo;
+    } else {
+      temp->siguiente = nuevoNodo;
+      temp = temp->siguiente;
     }
-  Newarr[size-1].numero=arr[size-1];
-  Newarr[size-1].siguiente=NULL;
-  return NULL;
+  }
+  return head;
 }
