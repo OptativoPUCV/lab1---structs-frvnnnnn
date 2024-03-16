@@ -572,3 +572,23 @@ exercises.c:164:32: error: control reaches end of non-void function [-Werror=ret
 cc1: all warnings being treated as errors
 Compilation failed
 b39c9d2
+Sat 16 Mar 2024 05:06:59 AM UTC: 
+ exercises.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:1:
+exercises.c:167:8: error: redefinition of ‘crearListaEnlazada’
+  167 | }Nodo *crearListaEnlazada(int arr[], int size) {
+      |        ^~~~~~~~~~~~~~~~~~
+exercises.c:154:7: note: previous definition of ‘crearListaEnlazada’ with type ‘Nodo *(int *, int)’ {aka ‘struct nodo *(int *, int)’}
+  154 | Nodo *crearListaEnlazada(int arr[], int size) {
+      |       ^~~~~~~~~~~~~~~~~~
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:177:27: error: incompatible types when returning type ‘struct nodo’ but ‘Nodo *’ {aka ‘struct nodo *’} was expected
+  177 |   return Newarr->siguiente[0]; }
+      |          ~~~~~~~~~~~~~~~~~^~~
+exercises.c:177:32: error: control reaches end of non-void function [-Werror=return-type]
+  177 |   return Newarr->siguiente[0]; }
+      |                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+ff5a2f1
