@@ -506,3 +506,14 @@ Sat 16 Mar 2024 02:07:37 AM UTC:
  tests:  0|3
 total_score: 40/70
 59683e0
+Sat 16 Mar 2024 02:33:33 AM UTC: 
+ exercises.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:96:15: error: ‘i’ undeclared (first use in this function)
+   96 |       if (arr[i]>=arr[i+1]){
+      |               ^
+exercises.c:96:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+4ee4bb9
