@@ -447,3 +447,16 @@ Sat 16 Mar 2024 01:36:27 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4479882
+Sat 16 Mar 2024 01:37:40 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:43: error: expected ‘;’ before ‘newArr’
+   49 |         newArr = realloc(newArr, *newSize)
+      |                                           ^
+      |                                           ;
+   50 |         newArr[*newSize] = arr[i];
+      |         ~~~~~~                             
+Compilation failed
+e13c0c0
